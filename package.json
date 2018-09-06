@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "server-dev": "nodemon ./server/server.js",
-    "react-dev": "webpack -w sass --watch app/sass:public/stylesheets"
+    "react-dev": "webpack -w sass -w client/stylesheets/index.scss public/stylesheets/index.css"
   },
   "dependencies": {
     "axios": "^0.18.0",
