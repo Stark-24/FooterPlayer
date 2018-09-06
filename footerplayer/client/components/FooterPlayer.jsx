@@ -6,3 +6,5 @@ var FooterPlayer = (props) => (
     <PlayControlsQueue/>
   </div>
 )
+
+export default FooterPlayer;
