@@ -28,12 +28,18 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 ## Development
 
+```sh
+npm start
+npm run server-dev
+npm run build
+```
+
 ### Installing Dependencies
 
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+brew install sass/sass/sass
 ```
 

@@ -1,10 +1,13 @@
 import React from 'react';
+import PlayControls from './PlayControls.jsx';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 var FooterPlayer = (props) => (
-  <div>
+  <React.Fragment>
+    <CssBaseline />
     <PlayControls/>
-    <PlayControlsQueue/>
-  </div>
+
+  </React.Fragment>
 )
 
 export default FooterPlayer;
