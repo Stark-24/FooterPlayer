@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #353535;
+        stroke: rgba(112,112,112,0);
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_20_1" data-name="Symbol 20 – 1" transform="translate(-144 -8)">
+    <g id="Rectangle_203" data-name="Rectangle 203" class="cls-1" transform="translate(144 8)">
+      <rect class="cls-2" width="16" height="56"/>
+      <rect class="cls-3" x="0.5" y="0.5" width="15" height="55"/>
+    </g>
+    <g id="Rectangle_204" data-name="Rectangle 204" class="cls-1" transform="translate(176 8)">
+      <rect class="cls-2" width="16" height="56"/>
+      <rect class="cls-3" x="0.5" y="0.5" width="15" height="55"/>
+    </g>
+  </g>
+</svg>
