@@ -6,6 +6,14 @@ module.exports =
     context: __dirname + '/client',
     entry: './index.js',
     mode: 'development',
+    // resolve: {
+    //   root: [
+    //     path.resolve('./client/assets'),
+    //   ]
+    // },
+    resolve: {
+      aliasFields: ['browser']
+    },
     module: {
       rules: [
         {

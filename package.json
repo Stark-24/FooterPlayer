@@ -11,7 +11,8 @@
   "scripts": {
     "test": "jest",
     "server-dev": "nodemon ./server/server.js",
-    "react-dev": "webpack -w"
+    "react-dev": "webpack -w",
+    "react-errors": "webpack --display-error-details"
   },
   "dependencies": {
     "@material-ui/core": "^3.0.2",

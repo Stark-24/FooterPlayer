@@ -1,8 +1,20 @@
 import React, {Component} from 'react';
 import PlayControlsQueue from './PlayControlsQueue.jsx';
 import styled from 'styled-components';
+//svgs
 import PreviousIcon from '../assets/previous.jsx';
+import PauseIcon from '../assets/pause.jsx';
+import NextIcon from '../assets/next.jsx';
+import ShuffleIcon from '../assets/shuffle.jsx';
 import RepeatIcon from '../assets/repeat.jsx';
+import RepeatOneIcon from '../assets/repeat-one.jsx';
+import RepeatAllIcon from '../assets/repeat-all.jsx';
+import MuteIcon from '../assets/mute.jsx';
+import VolumeMinIcon from '../assets/volume-min.jsx';
+import VolumeMaxIcon from '../assets/volume-max.jsx';
+import LikeIcon from '../assets/like.jsx';
+import HamburgerIcon from '../assets/hamburger.jsx';
+// import * as Icons from '../assets';
 
 //MAKE EACH BUTTON A CONTROL COMPONENT TO PASS STATE TO THE TIMELINE
 class PlayControls extends Component {
@@ -13,6 +25,7 @@ class PlayControls extends Component {
     // })
   }
 
+
   render() {
     return (
       
@@ -21,9 +34,19 @@ class PlayControls extends Component {
         <SkipButton>
           <PreviousIcon/>
         </SkipButton>
-        <PlayButton/>
-        <SkipButton/>
-        <ShuffleButton/>
+
+        <PlayButton>
+          <PauseIcon/>
+        </PlayButton>
+
+        <SkipButton>
+          <NextIcon/>
+        </SkipButton>
+
+        <ShuffleButton>
+          <ShuffleIcon/>
+        </ShuffleButton>
+
         <RepeatButton>
           <RepeatIcon/>
         </RepeatButton>
@@ -46,13 +69,22 @@ class PlayControls extends Component {
           </Scrubbable>
         </Timeline>
         {/* Volume Button */}
-        <VolumeButton/>
+        <VolumeButton>
+          <VolumeMaxIcon/>
+        </VolumeButton>
         {/* Song Description */}
         <SoundBadgeWrapper>
           <SoundBadge>
             <Avatar>
-
+              A
             </Avatar>
+            <CurrentPlaying>
+              <CurrentArtist>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentArtist>
+              <CurrentSongContainer>
+                <CurrentSong>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentSong>
+              </CurrentSongContainer>
+            </CurrentPlaying>
+
             <PlayControlsQueue/>
 
           </SoundBadge>
@@ -74,17 +106,17 @@ const Button = styled.button`
   height: 48px;
   margin: 0 0 0 12px;
   padding: 0;
-  color: transparent;
+  background-color: #f2f2f2;
   border: transparent;
-  // outline: none;
+  outline: none;
 `;
 
 const SkipButton = styled(Button)`
-  // background-position: 40% center;
+  /* background-position: center; */
 `;
 
 const PlayButton = styled(Button)`
-  // background-position: center center;
+  /* background-position: center center; */
 `;
 
 const ShuffleButton = styled(Button)`
@@ -150,10 +182,12 @@ const ProgressBackground = styled.div`
 `;
 
 const ProgressBar = styled(ProgressBackground)`
-  // transition: width 50ms;
+  /* transition: width 50ms; */
   background-color: #f50;
   width: 50%;
 `;
+
+// const ProgressHandle = styled
 
 const SoundBadgeWrapper = styled(Timeline)`
   display: block;
@@ -165,19 +199,59 @@ const SoundBadgeWrapper = styled(Timeline)`
 
 const SoundBadge = styled(SoundBadgeWrapper)`
   display: flex;
-  height: 100;
+  height: 100%;
   padding: 0;
   width: 324px;
+  /* vertical-align: middle; */
 `;
 
 const Avatar = styled.a`
   cursor: pointer;
-  line-height: 46px;
-  margin: 0 10px 0 0;
+  display: block;
+  float: left;
+  /* vertical-align: middle; */
+  /* top: 50%;
+  bottom: 50%; */
+  margin: auto 10px auto 0;
+  /* margin-right: 10px; */
   height: 30px;
   width: 30px;
 `;
 
-// const ProgressHandle = styled
+const CurrentPlaying = styled.div`
+  display: block;
+  float: left;
+  height: 34px;
+  min-width: 250px;
+  max-width: 250px;
+  margin: auto 0 auto 0;
+  /* line-height: 1.5em; */
+`;
+
+const CurrentArtist = styled.a`
+  cursor: pointer;
+  color: #999;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: normal;
+`;
+
+const CurrentSongContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 17px;
+  align-items: center;
+`;
+
+const CurrentSong = styled(CurrentArtist)`
+  color: #666;
+`;
+
 
 export default PlayControls;
