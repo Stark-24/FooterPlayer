@@ -29,8 +29,14 @@ class PlayControls extends Component {
   render() {
     return (
       
-      <React.Fragment>
-        {/* Butons */}
+      <div style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        alignContent: "center"
+        }}>
+        {/* Buttons */}
         <SkipButton>
           <PreviousIcon/>
         </SkipButton>
@@ -55,7 +61,7 @@ class PlayControls extends Component {
           <Scrubbable>
             {/* Elapsed Time */}
             <TimePassedContainer>
-              <ElapsedTime>1:30:00</ElapsedTime>
+              <ElapsedTime>30:00</ElapsedTime>
             </TimePassedContainer>
             {/* ProgressBar */}
             <ProgressWrapper>
@@ -64,7 +70,7 @@ class PlayControls extends Component {
             </ProgressWrapper>
             {/* Total Time */}
             <TimePassedContainer>
-              <TotalTime>3:00:00</TotalTime>
+              <TotalTime>1:00:00</TotalTime>
             </TimePassedContainer>
           </Scrubbable>
         </Timeline>
@@ -76,7 +82,7 @@ class PlayControls extends Component {
         <SoundBadgeWrapper>
           <SoundBadge>
             <Avatar>
-              A
+              <VolumeMinIcon/>
             </Avatar>
             <CurrentPlaying>
               <CurrentArtist>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentArtist>
@@ -84,13 +90,21 @@ class PlayControls extends Component {
                 <CurrentSong>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentSong>
               </CurrentSongContainer>
             </CurrentPlaying>
-
-            <PlayControlsQueue/>
+            <SoundBadgeActions>
+              <LikeButton>
+                <LikeIcon/>
+              </LikeButton>
+              <QueueButton>
+                <HamburgerIcon/>
+                <PlayControlsQueue/>
+              </QueueButton>
+            </SoundBadgeActions>
+            
 
           </SoundBadge>
         </SoundBadgeWrapper>
 
-      </React.Fragment>
+      </div>
   
     )
 
@@ -99,7 +113,7 @@ class PlayControls extends Component {
 
 const Button = styled.button`
   cursor: pointer;
-  display: flex;
+  display: block;
   position: relative;
   width: 24px;
   float: left;
@@ -132,11 +146,11 @@ const VolumeButton = styled(RepeatButton)`
 `;
 
 const Timeline = styled.div`
-  display: flex;
+  display: block;
   flex-grow: 1;
   float: left;
   position: relative;
-  width: 372px;
+  width: 472px;
   height: 48px;
   margin: 0 12px 0 0;
   padding: 0;
@@ -145,15 +159,18 @@ const Timeline = styled.div`
 `;
 
 const Scrubbable = styled(Timeline)`
+  display: flex;
   margin: 0;
   height: 46px;
 `;
 
 const TimePassedContainer = styled(Scrubbable)`
+  display: block;
   width: 50px;
 `;
 
 const ElapsedTime = styled.span`
+  display: block;
   color: #f50;
   text-align: right;
   line-height: 46px;
@@ -202,6 +219,7 @@ const SoundBadge = styled(SoundBadgeWrapper)`
   height: 100%;
   padding: 0;
   width: 324px;
+  float: left;
   /* vertical-align: middle; */
 `;
 
@@ -253,5 +271,22 @@ const CurrentSong = styled(CurrentArtist)`
   color: #666;
 `;
 
+const SoundBadgeActions = styled.div`
+  display: flex;
+  width: 49px;
+  height: 24px;
+  margin: auto 0 auto 14px;
+`;
+
+const LikeButton = styled(Button)`
+  width: 20px;
+  height: 20px;
+  margin: auto;
+`;
+
+const QueueButton = styled(Button)`
+  height: 24px;
+  margin: 0;
+`;
 
 export default PlayControls;

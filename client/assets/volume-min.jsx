@@ -6,8 +6,8 @@ const styles = {
   },
 
   size: {
-    width: '12px',
-    height: '24px',
+    width: '30px',
+    height: '30px',
     margin: 'auto',
   }
 

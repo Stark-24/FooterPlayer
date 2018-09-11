@@ -4,7 +4,6 @@ import QueueItemView from './QueueItemView.jsx';
 var PlayControlsQueue = (props) => {
     return (
       <React.Fragment>
-        PlayControlsQueue
         <QueueItemView/>
       </React.Fragment>
     )

@@ -15,8 +15,8 @@ const styles = {
   },
 
   size: {
-    width: '12px',
-    height: '24px',
+    width: '10px',
+    height: '20px',
     margin: 'auto',
   }
 }
