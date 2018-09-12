@@ -37,10 +37,11 @@ const InnerWrapper = styled(Wrapper)`
 
 const ControlsInnerWrapper = styled(InnerWrapper)`
   z-index: 333;
-  max-width: 1079px;
+  width: 1080px;
   min-width: 960px;
   position: relative;
   flex-wrap: nowrap;
+  margin: 0 auto;
 `;
 
 export default FooterPlayer;

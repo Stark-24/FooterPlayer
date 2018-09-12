@@ -4,14 +4,17 @@ import styled from 'styled-components';
 //svgs
 import PreviousIcon from '../assets/previous.jsx';
 import PauseIcon from '../assets/pause.jsx';
+import PlayIcon from '../assets/play.jsx';
 import NextIcon from '../assets/next.jsx';
-import ShuffleIcon from '../assets/shuffle.jsx';
-import RepeatIcon from '../assets/repeat.jsx';
+import ShuffleOffIcon from '../assets/shuffle-off.jsx';
+import ShuffleOnIcon from '../assets/shuffle-on.jsx';
+import RepeatNoneIcon from '../assets/repeat.jsx';
 import RepeatOneIcon from '../assets/repeat-one.jsx';
 import RepeatAllIcon from '../assets/repeat-all.jsx';
 import MuteIcon from '../assets/mute.jsx';
 import VolumeMinIcon from '../assets/volume-min.jsx';
 import VolumeMaxIcon from '../assets/volume-max.jsx';
+import DislikeIcon from '../assets/dislike.jsx';
 import LikeIcon from '../assets/like.jsx';
 import HamburgerIcon from '../assets/hamburger.jsx';
 // import * as Icons from '../assets';
@@ -20,41 +23,88 @@ import HamburgerIcon from '../assets/hamburger.jsx';
 class PlayControls extends Component {
   constructor(props) {
     super(props);
-    // this.state({
-
-    // })
+    this.state = {
+      play: false,
+      shuffle: false,
+      repeat: 0,
+      volume: true,
+      like: false,
+    }
+    this.playHandler = this.playHandler.bind(this);
+    this.shuffleHandler = this.shuffleHandler.bind(this);
+    this.repeatHandler = this.repeatHandler.bind(this);
+    this.volumeHandler = this.volumeHandler.bind(this);
+    this.likeHandler = this.likeHandler.bind(this);
   }
 
+  playHandler() {
+    this.setState({
+      play: !this.state.play
+    })
+  }
+  shuffleHandler() {
+    this.setState({
+      shuffle: !this.state.shuffle
+    })
+  }
+  repeatHandler() {
+    if (this.state.repeat === 2) {
+      this.setState({
+        repeat: 0
+      })
+    } else {
+      this.setState({
+        repeat: this.state.repeat + 1
+      })
+    }
+  }
+  volumeHandler() {
+    this.setState({
+      volume: !this.state.volume
+    })
+  }
+  likeHandler() {
+    this.setState({
+      like: !this.state.like
+    })
+  }
 
   render() {
+    let playButton = this.state.play ? <PlayIcon/> : <PauseIcon/>;
+    let shuffleButton = this.state.shuffle ? <ShuffleOnIcon/> : <ShuffleOffIcon/>;
+    let repeatButton = this.state.repeat === 0 ? <RepeatNoneIcon/> :
+                      this.state.repeat === 1 ? <RepeatOneIcon/> :
+                      <RepeatAllIcon/>;
+    let volumeButton = this.state.volume ? <VolumeMaxIcon/> : <MuteIcon/>;
+    let likeButton = this.state.like ? <LikeIcon/> : <DislikeIcon/>;
     return (
-      
       <div style={{
         display: "flex",
-        flexDirection: "row",
+        // flexDirection: "row",
+        width: "100%",
         justifyContent: "center",
-        alignItems: "center",
-        alignContent: "center"
+        // alignItems: "center",
+        // alignContent: "center"
         }}>
         {/* Buttons */}
         <SkipButton>
           <PreviousIcon/>
         </SkipButton>
 
-        <PlayButton>
-          <PauseIcon/>
+        <PlayButton onClick={this.playHandler}>
+          {playButton}
         </PlayButton>
 
         <SkipButton>
           <NextIcon/>
         </SkipButton>
 
-        <ShuffleButton>
-          <ShuffleIcon/>
+        <ShuffleButton onClick={this.shuffleHandler}>
+          {shuffleButton}
         </ShuffleButton>
 
-        <RepeatButton>
-          <RepeatIcon/>
+        <RepeatButton onClick={this.repeatHandler}>
+          {repeatButton}
         </RepeatButton>
         {/* Time */}
         <Timeline>
@@ -75,8 +125,8 @@ class PlayControls extends Component {
           </Scrubbable>
         </Timeline>
         {/* Volume Button */}
-        <VolumeButton>
-          <VolumeMaxIcon/>
+        <VolumeButton onClick={this.volumeHandler}>
+          {volumeButton}
         </VolumeButton>
         {/* Song Description */}
         <SoundBadgeWrapper>
@@ -85,14 +135,14 @@ class PlayControls extends Component {
               <VolumeMinIcon/>
             </Avatar>
             <CurrentPlaying>
-              <CurrentArtist>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentArtist>
+              <CurrentArtist>TESTING 1 TESTING 2 </CurrentArtist>
               <CurrentSongContainer>
                 <CurrentSong>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentSong>
               </CurrentSongContainer>
             </CurrentPlaying>
             <SoundBadgeActions>
-              <LikeButton>
-                <LikeIcon/>
+              <LikeButton onClick={this.likeHandler}>
+                {likeButton}
               </LikeButton>
               <QueueButton>
                 <HamburgerIcon/>
@@ -138,7 +188,7 @@ const ShuffleButton = styled(Button)`
 `;
 
 const RepeatButton = styled(Button)`
-  margin-right: 20px;
+  margin-right: 12px;
 `;
 
 const VolumeButton = styled(RepeatButton)`
@@ -181,6 +231,7 @@ const ElapsedTime = styled.span`
 const ProgressWrapper = styled(Scrubbable)`
   cursor: pointer;
   padding: 10px 0;
+  width: 352px;
   margin: 13px 10px 0 10px;
 `;
 
@@ -275,7 +326,7 @@ const SoundBadgeActions = styled.div`
   display: flex;
   width: 49px;
   height: 24px;
-  margin: auto 0 auto 14px;
+  margin: auto 0 auto 7px;
 `;
 
 const LikeButton = styled(Button)`

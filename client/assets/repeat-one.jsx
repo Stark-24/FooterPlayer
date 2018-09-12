@@ -23,8 +23,8 @@ const styles = {
   },
 
   size: {
-    width: '10px',
-    height: '20px',
+    width: '18px',
+    height: '36px',
     margin: 'auto',
   }
 
