@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PlayControlsQueue from './PlayControlsQueue.jsx';
 import styled from 'styled-components';
+import axios from 'axios';
 //svgs
 import PreviousIcon from '../assets/previous.jsx';
 import PauseIcon from '../assets/pause.jsx';
@@ -25,6 +26,8 @@ class PlayControls extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentSong: '',
+      songs: [],
       play: false,
       shuffle: false,
       repeat: 0,
@@ -53,6 +56,26 @@ class PlayControls extends Component {
     this.volumeMouseEnter = this.volumeMouseEnter.bind(this);
     this.volumeMouseLeave = this.volumeMouseLeave.bind(this);
     this.queueHandler = this.queueHandler.bind(this);
+    this.fetch = this.fetch.bind(this);
+  }
+
+  componentDidMount() {
+    this.fetch();
+  }
+
+  fetch() {
+    axios
+      .get('/api/songs')
+      .then(({data}) => {
+        console.log(data[0]);
+        this.setState({
+          currentSong: data[0],
+          songs: data
+        })
+      })
+      .catch((err) => {
+        console.log('Error retrieving songs', err);
+      });
   }
 
   playHandler() {
@@ -217,13 +240,13 @@ class PlayControls extends Component {
         {/* Song Description */}
         <SoundBadgeWrapper>
           <SoundBadge>
-            <Avatar>
-              <VolumeMinIcon/>
-            </Avatar>
+            <Avatar 
+              style={{backgroundImage: `url(${this.state.currentSong.album_art})`}}
+            />
             <CurrentPlaying>
-              <CurrentArtist>TESTING 1 TESTING 2 </CurrentArtist>
+              <CurrentArtist>{this.state.currentSong.artist}</CurrentArtist>
               <CurrentSongContainer>
-                <CurrentSong>TESTING 1 TESTING 2 TESTING 3 TESTING 4 TESTING 5 TESTING 6</CurrentSong>
+                <CurrentSong>{this.state.currentSong.title}</CurrentSong>
               </CurrentSongContainer>
             </CurrentPlaying>
             <SoundBadgeActions>
@@ -232,13 +255,16 @@ class PlayControls extends Component {
               </LikeButton>
               <QueueButton onClick={this.queueHandler}>
                 {queueButton}
-                <PlayControlsQueue popoutStyles={{
-                  pointerEvents: this.state.queuePanelStyle.pointerEvents,
-                  transform: this.state.queuePanelStyle.transform,
-                  opacity: this.state.queuePanelStyle.opacity,
-                  transitionDuration: this.state.queuePanelStyle.transitionDuration,
-                  transitionTimingFunction: this.state.queuePanelStyle.transitionTimingFunction
-                  }}/>
+                <PlayControlsQueue 
+                  songs={this.state.songs}
+                  popoutStyles={{
+                    pointerEvents: this.state.queuePanelStyle.pointerEvents,
+                    transform: this.state.queuePanelStyle.transform,
+                    opacity: this.state.queuePanelStyle.opacity,
+                    transitionDuration: this.state.queuePanelStyle.transitionDuration,
+                    transitionTimingFunction: this.state.queuePanelStyle.transitionTimingFunction
+                  }}
+                />
               </QueueButton>
             </SoundBadgeActions>
             
@@ -391,8 +417,6 @@ const ProgressBar = styled(ProgressBackground)`
   width: 50%;
 `;
 
-// const ProgressHandle = styled
-
 const SoundBadgeWrapper = styled(Timeline)`
   display: block;
   box-sizing: border-box;
@@ -410,7 +434,7 @@ const SoundBadge = styled(SoundBadgeWrapper)`
   /* vertical-align: middle; */
 `;
 
-const Avatar = styled.a`
+const Avatar = styled.div`
   cursor: pointer;
   display: block;
   float: left;
@@ -420,7 +444,10 @@ const Avatar = styled.a`
   margin: auto 10px auto 0;
   /* margin-right: 10px; */
   height: 30px;
-  width: 30px;
+  min-width: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 `;
 
 const CurrentPlaying = styled.div`

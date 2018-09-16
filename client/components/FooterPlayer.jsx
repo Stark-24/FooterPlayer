@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 var FooterPlayer = (props) => (
 
   <React.Fragment>
-    <CssBaseline />
+    <CssBaseline/>
     <Wrapper>
       <InnerWrapper>
         <ControlsInnerWrapper>

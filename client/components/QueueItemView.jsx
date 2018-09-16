@@ -1,28 +1,25 @@
 import React from 'react';
-import VolumeMinIcon from '../assets/volume-min.jsx';
 import styled from 'styled-components';
 
-var QueueItemView = (props) => {
-
+var QueueItemView = ({song}) => {
   return ( 
     <ItemWrapper> 
       <ItemView>
         <DragHandle/>
         {/* Artwork */}
         <ItemArtwork>
-          <ArtworkImage>
-            {/* PLACEHOLDER */}
-            <VolumeMinIcon/>
-          </ArtworkImage>
+          <ArtworkImage 
+            style={{backgroundImage: `url(${song.album_art})`}}
+          />
           <PlayButton/>
         </ItemArtwork>
         {/* Details */}
         <ItemDetails>
           <ItemDetailsArtist>
-            <ArtistLink> TEST 1 TEST 2 TEST 3 </ArtistLink>
+            <ArtistLink> {song.artist} </ArtistLink>
           </ItemDetailsArtist>
           <ItemDetailsSong>
-            <SongLink> TEST 1 TEST 2 TEST 3 TEST 4 </SongLink>
+            <SongLink> {song.title} </SongLink>
           </ItemDetailsSong>
         </ItemDetails>
         {/* Duration */}
@@ -54,7 +51,7 @@ const ItemView = styled.div`
   padding: 0 24px;
   font-size: 12px;
   box-sizing: border-box;
-  font-family: "Interstate", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans;
   font-weight: 100;
 `;
 
@@ -62,10 +59,10 @@ const DragHandle = styled.div`
   cursor: move;
   display: block;
   border: 0;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…J2Mkg5Vjl6bTAgNGgydjJIOXYtMnptMCA0aDJ2Mkg5di0yeiIvPgogICAgPC9nPgo8L3N2Zz4K);
+  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…J2Mkg5Vjl6bTAgNGgydjJIOXYtMnptMCA0aDJ2Mkg5di0yeiIvPgogICAgPC9nPgo8L3N2Zz4K);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 24px 24px;
+  background-size: 24px 24px; */
   width: 24px;
   height: 48px;
   margin-left: -24px;
@@ -143,7 +140,7 @@ const ItemDuration = styled.div`
   line-height: 36px;
   min-width: 52px;
   color: #999;
-  font-family: "InterstateSound Tnum", "Interstate", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
+  font-family: InterstateSound Tnum, Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans;
   font-weight: 100;
 `;
 

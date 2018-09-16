@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import QueueItemView from './QueueItemView.jsx';
 import styled from 'styled-components';
 
-var PlayControlsQueue = ({popoutStyles}) => {
-
+var PlayControlsQueue = ({popoutStyles, songs}) => {
   return (
     <QueuePanel style={popoutStyles}>
       <Header>
@@ -14,22 +13,9 @@ var PlayControlsQueue = ({popoutStyles}) => {
       <Scrollable>
         <ScrollableInner>
           {/* <div> */}
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
-            <QueueItemView/>
+          {songs.map(song => (
+            <QueueItemView song={song} key={song.id}/>
+          ))}
           {/* </div> */}
         </ScrollableInner>
       </Scrollable>
@@ -85,7 +71,7 @@ const ClearButton = styled.input`
   line-height: 20px;
   white-space: nowrap;
   font-weight: 100;
-  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans";
+  font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans;
   text-align: center;
   vertical-align: baseline;
 `;
