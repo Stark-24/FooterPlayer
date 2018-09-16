@@ -1,0 +1,1005 @@
+[
+  {
+    "id": 1,
+    "title": "Constellate",
+    "artist": "Fleurie",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Fleurie_-_Constellate.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/constellate.jpg",
+    "upload_date": "2017-10-08 06:13:46",
+    "tags": "#dreampop",
+    "plays": 68
+  },
+  {
+    "id": 2,
+    "title": "Don't Leave Our Earth Alone",
+    "artist": "Nico Maximilian",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Nico_Maximilian___Composer_-_Don_t_Leave_Our_Earth_Alone__Cinematic___Epic_Music_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/dontleaveourearthalone.jpg",
+    "upload_date": "2017-10-16 08:47:07",
+    "tags": "#cinematic",
+    "plays": 49
+  },
+  {
+    "id": 3,
+    "title": "Sailboat Bed",
+    "artist": "The Devil Music Co.",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Devil_Music_Co._-_SAILBOAT_BED.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/sailboatbed.jpg",
+    "upload_date": "2017-12-08 22:46:09",
+    "tags": "#piano",
+    "plays": 21
+  },
+  {
+    "id": 4,
+    "title": "Slow Dance",
+    "artist": "Julie & Gent",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Julie__amp__Gent_-_Slow_Dance.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/slowdance.jpg",
+    "upload_date": "2018-04-05 00:05:07",
+    "tags": "#romantic",
+    "plays": 41
+  },
+  {
+    "id": 5,
+    "title": "You've Got a Way",
+    "artist": "Esther Garcia",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Esther_Garcia_-_You_ve_Got_a_Way.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/youvegotaway.jpg",
+    "upload_date": "2018-03-15 02:07:22",
+    "tags": "#cinematic",
+    "plays": 24
+  },
+  {
+    "id": 6,
+    "title": "Is It Right",
+    "artist": "Lower Loveday",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Lower_Loveday_-_Is_It_Right_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/isitright.jpg",
+    "upload_date": "2018-04-15 02:07:22",
+    "tags": "#indierock",
+    "plays": 89
+  },
+  {
+    "id": 7,
+    "title": "Good Problems",
+    "artist": "Lily Wolf",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Lilly_Wolf_-_Good_Problems.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/goodproblems.jpg",
+    "upload_date": "2017-07-15 02:07:22",
+    "tags": "#synthpop",
+    "plays": 21
+  },
+  {
+    "id": 8,
+    "title": "Dissolve Me",
+    "artist": "ISRA",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/ISRA_-_Dissolve_Me.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/dissolveme.jpg",
+    "upload_date": "2017-12-15 02:07:22",
+    "tags": "#pop",
+    "plays": 34
+  },
+  {
+    "id": 9,
+    "title": "It's Time",
+    "artist": "SCARICÀ RICASCÀ",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Scarica%CC%80_Ricasca%CC%80_-_It_s_Time.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/itstime.jpg",
+    "upload_date": "2018-09-14 02:07:22",
+    "tags": "#pop",
+    "plays": 88
+  },
+  {
+    "id": 10,
+    "title": "the forest is not alive",
+    "artist": "Dave Imbernon",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Dave_Imbernon_-_the_forest_is_not_alive.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/theforestisnotalive.jpg",
+    "upload_date": "2018-01-15 02:07:22",
+    "tags": "#contemporary",
+    "plays": 44
+  },
+  {
+    "id": 11,
+    "title": "Skylight",
+    "artist": "Ping Pong Club",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Ping_Pong_Club_-_Skylight.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/skylight.jpg",
+    "upload_date": "2018-01-16 02:07:22",
+    "tags": "#pop",
+    "plays": 99
+  },
+  {
+    "id": 12,
+    "title": "Take Me Away",
+    "artist": "Barefoot McCoy",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Barefoot_McCoy_-_Take_Me_Away.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/takemeaway.jpg",
+    "upload_date": "2018-02-18 02:07:22",
+    "tags": "#folk",
+    "plays": 77
+  },
+  {
+    "id": 13,
+    "title": "Strong",
+    "artist": "JekK",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/JekK_-_Strong.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/strong.jpg",
+    "upload_date": "2018-01-18 02:07:22",
+    "tags": "#pop",
+    "plays": 77
+  },
+  {
+    "id": 14,
+    "title": "Dreamer",
+    "artist": "Moped Genius",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Moped_Genius_-_Dreamer.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/dreamer.jpg",
+    "upload_date": "2018-06-18 02:07:22",
+    "tags": "#energetic",
+    "plays": 90
+  },
+  {
+    "id": 15,
+    "title": "IDK",
+    "artist": "The DLX",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/THE_DLX_-_IDK.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/idk.jpg",
+    "upload_date": "2018-01-01 02:07:22",
+    "tags": "#pop",
+    "plays": 23
+  },
+
+  {
+    "id": 16,
+    "title": "On the Come Up",
+    "artist": "Wordsmith",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Wordsmith_-_On_the_Come_Up.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/onthecomeup.jpg",
+    "upload_date": "2018-03-01 02:07:22",
+    "tags": "#rap",
+    "plays": 67
+  },
+  {
+    "id": 17,
+    "title": "Grateful",
+    "artist": "Mickey Blue",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Mickey_Blue_-_Grateful__Produced_by_Benstar_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/grateful.jpg",
+    "upload_date": "2018-06-01 02:07:22",
+    "tags": "#rnb",
+    "plays": 98
+  },
+
+  {
+    "id": 18,
+    "title": "The Great Ascending",
+    "artist": "So Far As I Know",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/So_Far_As_I_Know_-_The_Great_Ascending.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/thegreatascending.jpg",
+    "upload_date": "2018-08-01 02:07:22",
+    "tags": "#postrock",
+    "plays": 80
+  },
+  {
+    "id": 19,
+    "title": "Rise",
+    "artist": "Martinez",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Martinez_-_Rise.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/rise.jpg",
+    "upload_date": "2018-09-01 02:07:22",
+    "tags": "#dreampop",
+    "plays": 58
+  },
+
+  {
+    "id": 20,
+    "title": "King Gizzard & the Lizard Wizard - Crumbling Castle",
+    "artist": "Jamendo Music",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Jamendo_Music_-_King_Gizzard__amp__the_Lizard_Wizard_-_Crumbling_Castle.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/kinggizzard.jpg",
+    "upload_date": "2018-07-25 02:07:22",
+    "tags": "#romantic",
+    "plays": 19
+  },
+  {
+    "id": 21,
+    "title": "Melatonin",
+    "artist": "Carter Vail",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Carter_Vail_-_Melatonin.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/melatonin.jpg",
+    "upload_date": "2017-10-15 02:07:22",
+    "tags": "#dreampop",
+    "plays": 76
+  },
+  {
+    "id": 22,
+    "title": "After All I've Done",
+    "artist": "Always the Alibi",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Always_the_Alibi_-_After_All_I_ve_Done.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/afterallivedone.jpg",
+    "upload_date": "2017-01-02 02:07:22",
+    "tags": "#dreampop",
+    "plays": 76
+  },
+  {
+    "id": 23,
+    "title": "Crazy Glue",
+    "artist": "Melanie Ungar",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Melanie_Ungar_-_Crazy_Glue.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/crazyglue.jpg",
+    "upload_date": "2017-01-03 02:07:22",
+    "tags": "#pop",
+    "plays": 21
+  },
+  {
+    "id": 24,
+    "title": "James Alley Blues",
+    "artist": "Tony Peterson",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Tony_Petersen_-_James_Alley_Blues.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/jamesalley.jpg",
+    "upload_date": "2017-01-04 02:07:22",
+    "tags": "#blues",
+    "plays": 21
+  },
+  {
+    "id": 25,
+    "title": "The Spin Wires",
+    "artist": "Slam Van",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Spin_Wires_-_Slam_Van.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/spinwires.jpg",
+    "upload_date": "2017-01-05 02:07:22",
+    "tags": "#poppunk",
+    "plays": 31
+  },
+  {
+    "id": 26,
+    "title": "Good Omen",
+    "artist": "Quietly Concerned",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Quietly_Concerned_-_Good_Omen.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/goodomen.jpg",
+    "upload_date": "2017-01-07 02:07:22",
+    "tags": "#folk",
+    "plays": 22
+  },
+  {
+    "id": 27,
+    "title": "Gone",
+    "artist": "Michael McEacher",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Michael_McEachern_-_Gone.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/gone.jpg",
+    "upload_date": "2017-01-08 02:07:22",
+    "tags": "#electropop",
+    "plays": 99
+  },
+  {
+    "id": 28,
+    "title": "The New Me",
+    "artist": "Rye",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Rye_-_The_New_Me.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/thenewme.jpg",
+    "upload_date": "2017-01-09 02:07:22",
+    "tags": "#rap",
+    "plays": 98
+  },
+  {
+    "id": 29,
+    "title": "Fire",
+    "artist": "Seth Power",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Seth_Power_-_Fire.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/fire.jpg",
+    "upload_date": "2017-01-10 02:07:22",
+    "tags": "#pop",
+    "plays": 97
+  },
+  {
+    "id": 30,
+    "title": "Be Cool",
+    "artist": "Big Infinite",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Big_Infinite_-_Be_Cool.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/becool.jpg",
+    "upload_date": "2017-01-11 02:07:22",
+    "tags": "#uplifting",
+    "plays": 96
+  },
+  {
+    "id": 31,
+    "title": "Losing My Mind",
+    "artist": "Z-Major",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Z-Major_-_Losing_My_Mind.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/losingmymind.jpg",
+    "upload_date": "2017-01-12 02:07:22",
+    "tags": "#hiphop",
+    "plays": 95
+  },
+  {
+    "id": 32,
+    "title": "My Life",
+    "artist": "QueenzTheLyricist",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/QueenzTheLyricist_-_My_Life.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/mylife.jpg",
+    "upload_date": "2017-01-21 02:07:22",
+    "tags": "#rap",
+    "plays": 94
+  },
+  {
+    "id": 33,
+    "title": "These Days",
+    "artist": "Pure Mids",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Pure_Mids_-_These_Days.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/thesedays.jpg",
+    "upload_date": "2017-01-22 02:07:22",
+    "tags": "#alternativerock",
+    "plays": 93
+  },
+  {
+    "id": 34,
+    "title": "Moments",
+    "artist": "The.madpix.project",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The.madpix.project_-_Moments.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/moments.jpg",
+    "upload_date": "2017-01-23 02:07:22",
+    "tags": "#house",
+    "plays": 92
+  },
+  {
+    "id": 35,
+    "title": "Alchemy",
+    "artist": "We Were Cheerleaders",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/We_Were_Cheerleaders_-_Alchemy.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/alchemy.jpg",
+    "upload_date": "2017-01-24 02:07:22",
+    "tags": "#rock",
+    "plays": 91
+  },
+  {
+    "id": 36,
+    "title": "Pursuit of Happiness",
+    "artist": "Joshua Ticsay",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Joshua_Ticsay_-_Pursuit_of_Happiness.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/pursuitofhappiness.jpg",
+    "upload_date": "2017-01-25 02:07:22",
+    "tags": "#hiphop",
+    "plays": 90
+  },
+  {
+    "id": 37,
+    "title": "X-Hale",
+    "artist": "Tom Orlando",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Tom_Orlando_-_X-Hale__feat._Breana_Marin_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/xhale.jpg",
+    "upload_date": "2017-01-26 02:07:22",
+    "tags": "#rap",
+    "plays": 89
+  },
+  {
+    "id": 38,
+    "title": "Noelle",
+    "artist": "Omonoko",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Omonoko_-_Noelle.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/noelle.jpg",
+    "upload_date": "2017-01-27 02:07:22",
+    "tags": "#sentimental",
+    "plays": 88
+  },
+  {
+    "id": 39,
+    "title": "Talking & Bells",
+    "artist": "Tonepoet",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Tonepoet_-_Talking__amp__Bells__Part_1_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/talkingnbells.jpg",
+    "upload_date": "2017-01-28 02:07:22",
+    "tags": "#dreamy",
+    "plays": 89
+  },
+  {
+    "id": 40,
+    "title": "Good Old Times",
+    "artist": "Alex Cohen",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Alex_Cohen_-_Good_Old_Times.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/goodoldtimes.jpg",
+    "upload_date": "2017-01-29 02:07:22",
+    "tags": "#indie",
+    "plays": 87
+  },
+  {
+    "id": 41,
+    "title": "Anthem for Huddled Masses",
+    "artist": "The Bourgeois",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Bourgeois_-_Anthem_for_the_Huddled_Masses.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/anthem.jpg",
+    "upload_date": "2017-01-30 02:07:22",
+    "tags": "#rock",
+    "plays": 86
+  },
+  {
+    "id": 42,
+    "title": "We Got The Love",
+    "artist": "The Moose",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Moose_-_We_Got_The_Love.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/wegotthelove.jpg",
+    "upload_date": "2017-01-31 02:07:22",
+    "tags": "#dance",
+    "plays": 85
+  },
+  {
+    "id": 43,
+    "title": "Seventeen",
+    "artist": "Jeffrey Phillips Nelson",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Jeffrey_Philip_Nelson_-_Seventeen.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/seventeen.jpg",
+    "upload_date": "2017-02-02 02:07:22",
+    "tags": "#folk",
+    "plays": 84
+  },
+  {
+    "id": 44,
+    "title": "Straight Chillin'",
+    "artist": "Mindfull",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Mindfull_-_Straight_Chillin___Prod._by_Jeo7_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/straightchillin.jpg",
+    "upload_date": "2017-02-03 02:07:22",
+    "tags": "#hiphop",
+    "plays": 84
+  },
+  {
+    "id": 45,
+    "title": "Good Morning",
+    "artist": "Ralph Castelli",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Ralph_Castelli_-_good_morning.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/goodmorning.jpg",
+    "upload_date": "2017-02-04 02:07:22",
+    "tags": "#indie",
+    "plays": 83
+  },
+  {
+    "id": 46,
+    "title": "Peyote",
+    "artist": "Kinematic",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Kinematic_-_Peyote.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/peyote.jpg",
+    "upload_date": "2017-02-06 02:07:22",
+    "tags": "#rock",
+    "plays": 85
+  },
+  {
+    "id": 47,
+    "title": "B.E.D(Stripped)",
+    "artist": "Cortez",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Corte%CC%81z_-_B.E.D.__Stripped_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/bed.jpg",
+    "upload_date": "2017-02-07 02:07:22",
+    "tags": "#rnb",
+    "plays": 85
+  },
+  {
+    "id": 48,
+    "title": "Higher and Higher",
+    "artist": "Scream Inc.",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Scream_Inc._-_Higher_And_Higher.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/higherandhigher.jpg",
+    "upload_date": "2017-02-08 02:07:22",
+    "tags": "#metal",
+    "plays": 60
+  },
+  {
+    "id": 49,
+    "title": "Beautiful Wonderful Life",
+    "artist": "RogerThat",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/RogerThat_-_Beautiful_Wonderful_Life.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/beautifulwonderfullife.jpg",
+    "upload_date": "2017-02-09 02:07:22",
+    "tags": "#pop",
+    "plays": 60
+  },
+  {
+    "id": 50,
+    "title": "På Stupet",
+    "artist": "DigDug",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/DIGdug_-_Pa%CC%8A_Stupet.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/pastupet.jpg",
+    "upload_date": "2017-02-10 02:07:22",
+    "tags": "#retro",
+    "plays": 100
+  },
+  {
+    "id": 51,
+    "title": "Arm and a Leg",
+    "artist": "KaneGang",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/KaneGang_-_Arm_and_a_Leg.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/armandaleg.jpg",
+    "upload_date": "2017-02-12 02:07:22",
+    "tags": "#hiphop",
+    "plays": 101
+  },
+  {
+    "id": 52,
+    "title": "Groupie",
+    "artist": "Kidd Young",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Kidd_Young_-_Groupie.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/groupie.jpg",
+    "upload_date": "2017-02-13 02:07:22",
+    "tags": "#rap",
+    "plays": 101
+  },
+  {
+    "id": 53,
+    "title": "Out of Air",
+    "artist": "Sydney Leigh",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Sydney_Leigh_-_Out_of_Air.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/outofair.jpg",
+    "upload_date": "2017-02-17 02:07:22",
+    "tags": "#rnb",
+    "plays": 101
+  },
+  {
+    "id": 54,
+    "title": "Universal Funk",
+    "artist": "Duo Teslar",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Duo_Teslar_-_Universal_Funk.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/universalfunk.jpg",
+    "upload_date": "2017-02-18 02:07:22",
+    "tags": "#electronic",
+    "plays": 101
+  },
+  {
+    "id": 55,
+    "title": "The Little Robot",
+    "artist": "Forget the Whale",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Forget_the_Whale_-_The_Little_Robot.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/1.300.jpg",
+    "upload_date": "2017-02-19 02:07:22",
+    "tags": "#electronic",
+    "plays": 101
+  },
+  {
+    "id": 56,
+    "title": "To The Roofs",
+    "artist": "Colaars",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Colaars_-_To_The_Roofs.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/totheroofs.jpg",
+    "upload_date": "2017-02-20 02:07:22",
+    "tags": "#indierock",
+    "plays": 101
+  },
+  {
+    "id": 57,
+    "title": "Summer",
+    "artist": "Michael ellis",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Michael_Ellis_-_Summer.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/summer.jpg",
+    "upload_date": "2017-02-21 02:07:22",
+    "tags": "#pop",
+    "plays": 102
+  },
+  {
+    "id": 58,
+    "title": "Our Place",
+    "artist": "Arrow & Olive",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Arrow__amp__Olive_-_Our_Place.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/ourplace.jpg",
+    "upload_date": "2015-02-21 02:07:22",
+    "tags": "#indie",
+    "plays": 102
+  },
+  {
+    "id": 59,
+    "title": "You Got Me Wrong",
+    "artist": "Sifar",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Sifar_-_You_Got_Me_Wrong.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/yougotmewrong.jpg",
+    "upload_date": "2018-02-22 02:07:22",
+    "tags": "#rock",
+    "plays": 102
+  },
+  {
+    "id": 60,
+    "title": "Jan Acendra y Su Son Latino - Te Quiero Decir",
+    "artist": "Jan Y Su Son Latino",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Jan_y_Su_Son_Latino_-_Jan_Acendra_y_Su_Son_Latino_-_Te_Quiero_Decir.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/janacendra.jpg",
+    "upload_date": "2017-09-22 02:07:22",
+    "tags": "#latin",
+    "plays": 103
+  },
+  {
+    "id": 61,
+    "title": "Give U My Name",
+    "artist": "Jyant",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Jyant_-_Give_U_My_Name.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/giveumyname.jpg",
+    "upload_date": "2018-04-01 02:07:22",
+    "tags": "#rnb",
+    "plays": 103
+  },
+  {
+    "id": 62,
+    "title": "Sweet-Master",
+    "artist": "Eddie",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/EDDIE_-_Sweet-Master.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/sweetmaster.jpg",
+    "upload_date": "2018-04-02 02:07:22",
+    "tags": "#poprock",
+    "plays": 104
+  },
+  {
+    "id": 63,
+    "title": "Woodman Spare that Tree",
+    "artist": "Robin Grey",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Robin_Grey_-_Woodman_Spare_That_Tree.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/woodmansparethattree.jpg",
+    "upload_date": "2018-04-07 02:07:22",
+    "tags": "#strings",
+    "plays": 101
+  },
+  {
+    "id": 64,
+    "title": "When You Leave",
+    "artist": "Boom Boom Beckett",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Boom_Boom_Beckett_-_When_You_Leave__Vocal_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/whenyouleave.jpg",
+    "upload_date": "2018-04-08 02:07:22",
+    "tags": "#jazz",
+    "plays": 101
+  },
+  {
+    "id": 65,
+    "title": "In Tune - Remix 2",
+    "artist": "Kellee Maize",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Kellee_Maize_-_In_Tune_-_Remix_2__2017_Version_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/intune.jpg",
+    "upload_date": "2017-04-04 02:07:22",
+    "tags": "#electronic",
+    "plays": 103
+  },
+  {
+    "id": 66,
+    "title": "Star Theatre",
+    "artist": "Numback",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Numback_-_Star_Theatre.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/startheatre.jpg",
+    "upload_date": "2017-04-06 02:07:22",
+    "tags": "#electronic",
+    "plays": 103
+  },
+  {
+    "id": 67,
+    "title": "La La",
+    "artist": "Reole",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Reole_-_La_La.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/lala.jpg",
+    "upload_date": "2014-04-10 02:07:22",
+    "tags": "#reggae",
+    "plays": 103
+  },
+  {
+    "id": 68,
+    "title": "Done With You",
+    "artist": "SadMe",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/SadMe_-_Done_With_You.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/donewithyou.jpg",
+    "upload_date": "2017-05-10 02:07:22",
+    "tags": "#rock",
+    "plays": 103
+  },
+  {
+    "id": 69,
+    "title": "Safe and Warm in Hunter's Arms",
+    "artist": "Roller Genoa",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Roller_Genoa_-_Safe_and_Warm_in_Hunter_s_Arms.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/safeandwarm.jpg",
+    "upload_date": "2017-05-12 02:07:22",
+    "tags": "#electricguitar",
+    "plays": 103
+  },
+  {
+    "id": 70,
+    "title": "He Wants",
+    "artist": "lau",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/lau_-_He_Wants.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/hewants.jpg",
+    "upload_date": "2017-05-16 02:07:22",
+    "tags": "#pop",
+    "plays": 103
+  },
+  {
+    "id": 71,
+    "title": "House of Gold",
+    "artist": "Stephen Keaney",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Stephen_Keaney_-_House_of_Gold.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/houseofgold.jpg",
+    "upload_date": "2018-05-17 02:07:22",
+    "tags": "#folk",
+    "plays": 104
+  },
+  {
+    "id": 72,
+    "title": "Make Believe",
+    "artist": "VITNE",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/VITNE_-_Make_Believe.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/makebelieve.jpg",
+    "upload_date": "2018-05-18 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 73,
+    "title": "Respiro",
+    "artist": "Mattia Vlad Morleo",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Mattia_Vlad_Morleo_-_Respiro.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/respiro.jpg",
+    "upload_date": "2016-05-18 02:07:22",
+    "tags": "#piano",
+    "plays": 104
+  },
+  {
+    "id": 74,
+    "title": "Homecoming(The Girls Mix)",
+    "artist": "Tracing Arcs",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Tracing_Arcs_-_Homecoming__The_Girls_Mix_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/homecoming.jpg",
+    "upload_date": "2017-05-19 02:07:22",
+    "tags": "#peaceful",
+    "plays": 104
+  },
+  {
+    "id": 75,
+    "title": "On Sale",
+    "artist": "Golden Duck Orchestra",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Golden_Duck_Orchestra_-_ON_SALE.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/onsale.jpg",
+    "upload_date": "2016-05-20 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 76,
+    "title": "Time Travel",
+    "artist": "Jasmine Jordan",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Jasmine_Jordan_-_Time_Travel__Feat._Blanchard_De_Wave_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/timetravel.jpg",
+    "upload_date": "2016-05-21 02:07:22",
+    "tags": "#soul",
+    "plays": 104
+  },
+  {
+    "id": 77,
+    "title": "I Could Have Been Someone",
+    "artist": "MAY",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/MAY_-_I_Could_Have_Been_Someone.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/icouldvebeensomeone.jpg",
+    "upload_date": "2016-05-22 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 78,
+    "title": "The Garden Jungle",
+    "artist": "Balmain",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Balmain_-_The_Garden_Jungle.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/thegardenjungle.jpg",
+    "upload_date": "2016-05-23 02:07:22",
+    "tags": "#hiphop",
+    "plays": 104
+  },
+  {
+    "id": 79,
+    "title": "West Coast Highway",
+    "artist": "Zack Linton",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Zack_Linton_-_West_Coast_Highway.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/westcoasthighway.jpg",
+    "upload_date": "2016-05-24 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 80,
+    "title": "Big Big Boss",
+    "artist": "Nicolas Falcon",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Nicolas_Falcon_-_Big_Big_Boss.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/bigbigboss.jpg",
+    "upload_date": "2016-05-25 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 81,
+    "title": "Energy",
+    "artist": "Pokki DJ",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Pokki_DJ_-_Energy.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/energy.jpg",
+    "upload_date": "2016-05-26 02:07:22",
+    "tags": "#dance",
+    "plays": 104
+  },
+  {
+    "id": 82,
+    "title": "Round and Round",
+    "artist": "Lawrence Beamen",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/LAWRENCE_BEAMEN_-_Round_and_Round.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/roundandround.jpg",
+    "upload_date": "2014-05-27 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 83,
+    "title": "Close Your Eyes",
+    "artist": "NEREIS(Black Star)",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/NEREIS__Black_Star__-_Close_Your_Eyes.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/closeyoureyes.jpg",
+    "upload_date": "2014-05-28 02:07:22",
+    "tags": "#heavymetal",
+    "plays": 104
+  },
+  {
+    "id": 84,
+    "title": "Sorry",
+    "artist": "Kavi and Travis Music Experience",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Kavi_and_Travis_Music_Experience_-_Sorry.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/sorry.jpg",
+    "upload_date": "2014-05-29 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 85,
+    "title": "Modern Life",
+    "artist": "Candids",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/CANDIDS_-_MODERN_LIFE.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/modernlife.jpg",
+    "upload_date": "2017-07-29 02:07:22",
+    "tags": "#indie",
+    "plays": 104
+  },
+  {
+    "id": 86,
+    "title": "Pra Onde e Que eu Vou",
+    "artist": "Diego Noar",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/diego_Noar_-_Pra_Onde_e_Que_eu_Vou_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/praonde.jpg",
+    "upload_date": "2016-07-29 02:07:22",
+    "tags": "#latin",
+    "plays": 104
+  },
+  {
+    "id": 87,
+    "title": "New day",
+    "artist": "J Lynn the Bride",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/J_Lynn_the_Bride_-_New_day.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/newday.jpg",
+    "upload_date": "2018-06-29 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 88,
+    "title": "If We Could Turn Back Time",
+    "artist": "Ocean Shiver",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Ocean_Shiver_-_If_We_Could_Turn_Back_Time__remix_.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/ifwecouldturnbacktime.jpg",
+    "upload_date": "2018-06-30 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 89,
+    "title": "Patience My Lover feat. Axel",
+    "artist": "Ed Napoli",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Ed_Napoli_-_Patience_My_Lover_feat._Axel.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/patiencemylover.jpg",
+    "upload_date": "2017-03-30 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 90,
+    "title": "Say You Love Me",
+    "artist": "David Krystal",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/David_Krystal_-_Say_You_Love_Me.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/sayyouloveme.jpg",
+    "upload_date": "2013-03-30 02:07:22",
+    "tags": "#electricpiano",
+    "plays": 104
+  },
+  {
+    "id": 91,
+    "title": "Falcon 69",
+    "artist": "The Easton Ellises",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Easton_Ellises_-_Falcon_69.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/falcon69.jpg",
+    "upload_date": "2014-03-30 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 92,
+    "title": "On Everything",
+    "artist": "Axel Antunes",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Axel_Antunes_-_On_Everything.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/oneverything.jpg",
+    "upload_date": "2017-04-15 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 93,
+    "title": "Lemon Pop",
+    "artist": "The Verandas",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/The_Verandas_-_Lemon_Pop.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/lemonpop.jpg",
+    "upload_date": "2017-04-16 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 94,
+    "title": "Une Vie De Roi",
+    "artist": "LÖHSTANA DAVID ",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Lo%CC%88hstana_David_-_Une_Vie_De_Roi.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/une.jpg",
+    "upload_date": "2015-04-18 02:07:22",
+    "tags": "#folk",
+    "plays": 104
+  },
+  {
+    "id": 95,
+    "title": "Club Life",
+    "artist": "AntarcticBreeze",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/ANtarcticbreeze_-_Club_Life.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/clublife.jpg",
+    "upload_date": "2015-04-17 02:07:22",
+    "tags": "#house",
+    "plays": 104
+  },
+  {
+    "id": 96,
+    "title": "Budapest in the rain",
+    "artist": "Johnny Bemolle's",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Johnny_Bemolle_s_-_Budapest_in_the_rain.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/budapest.jpg",
+    "upload_date": "2016-04-18 02:07:22",
+    "tags": "#cello",
+    "plays": 104
+  },
+  {
+    "id": 97,
+    "title": "These Nights",
+    "artist": "Modern Pitch",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Townhouse_Woods_-_A_Million_Ways.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/amillionway.jpg",
+    "upload_date": "2014-04-18 02:07:22",
+    "tags": "#folk",
+    "plays": 104
+  },
+  {
+    "id": 98,
+    "title": "A Million ways",
+    "artist": "Townhouse Woods",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Modern_Pitch_-_These_Nights.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/thesenights.jpg",
+    "upload_date": "2015-12-18 02:07:22",
+    "tags": "#rock",
+    "plays": 104
+  },
+  {
+    "id": 99,
+    "title": "Endless Hours",
+    "artist": "Fresh Body Shop",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Fresh_Body_Shop_-_Endless_Hours.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/endlesshours.jpg",
+    "upload_date": "2015-04-19 02:07:22",
+    "tags": "#pop",
+    "plays": 104
+  },
+  {
+    "id": 100,
+    "title": "Lotus Indou",
+    "artist": "Potta La Motta",
+    "media": "https://s3-us-west-1.amazonaws.com/starkloud/Potta_la_motta_-_Lotus_Indou.mp3",
+    "album_art": "https://s3-us-west-1.amazonaws.com/starkloud/SONGS/lotusindou.jpg",
+    "upload_date": "2015-04-20 02:07:22",
+    "tags": "#hiphop",
+    "plays": 104
+  }
+]
