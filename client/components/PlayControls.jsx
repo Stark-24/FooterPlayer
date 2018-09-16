@@ -26,6 +26,7 @@ class PlayControls extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentSongIndex: 0,
       currentSong: '',
       songs: [],
       play: false,
@@ -49,6 +50,7 @@ class PlayControls extends Component {
       }
     }
     this.playHandler = this.playHandler.bind(this);
+    this.nextHandler = this.nextHandler.bind(this);
     this.shuffleHandler = this.shuffleHandler.bind(this);
     this.repeatHandler = this.repeatHandler.bind(this);
     this.volumeHandler = this.volumeHandler.bind(this);
@@ -69,25 +71,55 @@ class PlayControls extends Component {
       .then(({data}) => {
         console.log(data[0]);
         this.setState({
-          currentSong: data[0],
           songs: data
-        })
+        });
+        this.setState({
+          currentSong: this.state.songs[this.state.currentSongIndex]
+        });
       })
       .catch((err) => {
         console.log('Error retrieving songs', err);
       });
   }
 
+  previousHandler() {
+    if (this.state.currentSongIndex === 0) {
+      this.setState({
+        currentSongIndex: this.state.songs.length - 1,
+        currentSong: this.state.songs[this.state.currentSongIndex]
+      })
+    } else {
+      this.setState({
+        currentSongIndex: this.state.currentSongIndex - 1,
+        currentSong: this.state.songs[this.state.currentSongIndex]
+      })
+    }
+  }
+
   playHandler() {
     this.setState({
       play: !this.state.play
-    })
+    });
   }
+
+  nextHandler() {
+    console.log('Next was clicked')
+    this.setState({
+      currentSongIndex: this.state.currentSongIndex + 1,
+      currentSong: this.state.songs[this.state.currentSongIndex]
+    })
+    console.log(this.state.currentSongIndex);
+    // this.setState({
+    //   currentSong: this.state.songs[this.state.currentSongIndex]
+    // })
+  }
+
   shuffleHandler() {
     this.setState({
       shuffle: !this.state.shuffle
-    })
+    });
   }
+
   repeatHandler() {
     if (this.state.repeat === 2) {
       this.setState({
@@ -99,11 +131,13 @@ class PlayControls extends Component {
       })
     }
   }
+
   volumeHandler() {
     this.setState({
       volume: !this.state.volume
     })
   }
+
   likeHandler() {
     this.setState({
       like: !this.state.like
@@ -121,6 +155,7 @@ class PlayControls extends Component {
       }
     })
   }
+
   volumeMouseLeave() {
     this.setState({
       volumeSliderStyle: {
@@ -186,7 +221,7 @@ class PlayControls extends Component {
           {playButton}
         </PlayButton>
 
-        <SkipButton>
+        <SkipButton onClick={this.nextHandler}>
           <NextIcon/>
         </SkipButton>
 
