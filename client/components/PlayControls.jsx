@@ -17,6 +17,7 @@ import VolumeMaxIcon from '../assets/volume-max.jsx';
 import DislikeIcon from '../assets/dislike.jsx';
 import LikeIcon from '../assets/like.jsx';
 import HamburgerIcon from '../assets/hamburger.jsx';
+import HamburgerClickedIcon from '../assets/hamburger-clicked.jsx';
 // import * as Icons from '../assets';
 
 //MAKE EACH BUTTON A CONTROL COMPONENT TO PASS STATE TO THE TIMELINE
@@ -29,12 +30,29 @@ class PlayControls extends Component {
       repeat: 0,
       volume: true,
       like: false,
+      volumeSliderStyle: {
+        height: '0',
+        borderColor: '#f2f2f2',
+        boxShadow: '0',
+        overflow: 'none'
+      },
+      queue: false,
+      queuePanelStyle: {
+        pointerEvents: 'none',
+        transform: 'translateY(100px)',
+        opacity: '0',
+        transitionDuration: '0.2s',
+        transitionTimingFunction: 'cubic-bezier(.66,-.41,1,1)'
+      }
     }
     this.playHandler = this.playHandler.bind(this);
     this.shuffleHandler = this.shuffleHandler.bind(this);
     this.repeatHandler = this.repeatHandler.bind(this);
     this.volumeHandler = this.volumeHandler.bind(this);
     this.likeHandler = this.likeHandler.bind(this);
+    this.volumeMouseEnter = this.volumeMouseEnter.bind(this);
+    this.volumeMouseLeave = this.volumeMouseLeave.bind(this);
+    this.queueHandler = this.queueHandler.bind(this);
   }
 
   playHandler() {
@@ -69,6 +87,55 @@ class PlayControls extends Component {
     })
   }
 
+  volumeMouseEnter() {
+    this.setState({
+      volumeSliderStyle: {
+        height: '118px',
+        borderColor: '#ccc',
+        boxShadow: '0 2px 4px rgba(0,0,0,.1)',
+        overflow: 'initial',
+        opacity: '1'
+      }
+    })
+  }
+  volumeMouseLeave() {
+    this.setState({
+      volumeSliderStyle: {
+        height: '0',
+        borderColor: '#f2f2f2',
+        boxShadow: 'none',
+        overflow: 'none',
+        opacity: '0'
+      }
+    })
+  }
+
+  queueHandler() {
+    if (this.state.queue) {
+      this.setState({
+        queue: !this.state.queue,
+        queuePanelStyle: {
+          pointerEvents: 'none',
+          transform: 'translateY(100px)',
+          opacity: '0',
+          transitionDuration: '0.2s',
+          transitionTimingFunction: 'cubic-bezier(.66,-.41,1,1)'
+        }
+      })
+    } else {
+      this.setState({
+        queue: !this.state.queue,
+        queuePanelStyle: {
+          pointerEvents: 'auto',
+          transform: 'translateY(0)',
+          opacity: '1',
+          transitionDuration: '0.35s',
+          transitionTimingFunction: 'cubic-bezier(0,0,0,1.2)'
+        }
+      })
+    }
+  }
+
   render() {
     let playButton = this.state.play ? <PlayIcon/> : <PauseIcon/>;
     let shuffleButton = this.state.shuffle ? <ShuffleOnIcon/> : <ShuffleOffIcon/>;
@@ -77,6 +144,7 @@ class PlayControls extends Component {
                       <RepeatAllIcon/>;
     let volumeButton = this.state.volume ? <VolumeMaxIcon/> : <MuteIcon/>;
     let likeButton = this.state.like ? <LikeIcon/> : <DislikeIcon/>;
+    let queueButton = this.state.queue ? <HamburgerClickedIcon/> : <HamburgerIcon/>;
     return (
       <div style={{
         display: "flex",
@@ -125,8 +193,26 @@ class PlayControls extends Component {
           </Scrubbable>
         </Timeline>
         {/* Volume Button */}
-        <VolumeButton onClick={this.volumeHandler}>
+        <VolumeButton 
+          onClick={this.volumeHandler} 
+          onMouseEnter={this.volumeMouseEnter} 
+          onMouseLeave={this.volumeMouseLeave}>
           {volumeButton}
+          <VolumeSlider style={{
+            height: this.state.volumeSliderStyle.height,
+            borderColor: this.state.volumeSliderStyle.borderColor,
+            boxShadow: this.state.volumeSliderStyle.boxShadow,
+            overflow: this.state.volumeSliderStyle.overflow
+          }}>
+
+            <VolumeSliderBackground style={{
+              opacity: this.state.volumeSliderStyle.opacity
+            }}/>
+            <VolumeSliderProgress style={{
+              opacity: this.state.volumeSliderStyle.opacity
+            }}/>
+
+          </VolumeSlider>
         </VolumeButton>
         {/* Song Description */}
         <SoundBadgeWrapper>
@@ -144,13 +230,18 @@ class PlayControls extends Component {
               <LikeButton onClick={this.likeHandler}>
                 {likeButton}
               </LikeButton>
-              <QueueButton>
-                <HamburgerIcon/>
-                <PlayControlsQueue/>
+              <QueueButton onClick={this.queueHandler}>
+                {queueButton}
+                <PlayControlsQueue popoutStyles={{
+                  pointerEvents: this.state.queuePanelStyle.pointerEvents,
+                  transform: this.state.queuePanelStyle.transform,
+                  opacity: this.state.queuePanelStyle.opacity,
+                  transitionDuration: this.state.queuePanelStyle.transitionDuration,
+                  transitionTimingFunction: this.state.queuePanelStyle.transitionTimingFunction
+                  }}/>
               </QueueButton>
             </SoundBadgeActions>
             
-
           </SoundBadge>
         </SoundBadgeWrapper>
 
@@ -195,12 +286,56 @@ const VolumeButton = styled(RepeatButton)`
   margin-left: 0;
 `;
 
+const VolumeSlider = styled.div`
+  position: absolute;
+  left: -5px;
+  bottom: 40px;
+  z-index: 1;
+  height: 0;
+  width: 30px;
+  transition: height 100ms;
+  transform: translateZ(0);
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+  outline: 0;
+  cursor: pointer;
+`;
+
+const VolumeSliderBackground = styled.div`
+  opacity: 0;
+  transition: opacity 100ms linear;
+  transition-delay: 100ms;
+
+  z-index: 2;
+  position: absolute;
+  display: block;
+  background-color: #ccc;
+  bottom: 13px;
+  left: 0;
+  height: 92px;
+  width: 2px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  outline: 0;
+  margin-left: 14px; 
+`;
+
+const VolumeSliderProgress = styled(VolumeSliderBackground)`
+  height: 40px;
+  background-color: #f50;
+  z-index: 3;
+
+`;
+
 const Timeline = styled.div`
   display: block;
   flex-grow: 1;
   float: left;
   position: relative;
   width: 472px;
+  /* min-width: 332px; */
   height: 48px;
   margin: 0 12px 0 0;
   padding: 0;
@@ -211,6 +346,7 @@ const Timeline = styled.div`
 const Scrubbable = styled(Timeline)`
   display: flex;
   margin: 0;
+  width: 100%;
   height: 46px;
 `;
 
@@ -330,8 +466,8 @@ const SoundBadgeActions = styled.div`
 `;
 
 const LikeButton = styled(Button)`
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin: auto;
 `;
 
