@@ -49,6 +49,7 @@ class PlayControls extends Component {
         transitionTimingFunction: 'cubic-bezier(.66,-.41,1,1)'
       }
     }
+    this.previousHandler = this.previousHandler.bind(this);
     this.playHandler = this.playHandler.bind(this);
     this.nextHandler = this.nextHandler.bind(this);
     this.shuffleHandler = this.shuffleHandler.bind(this);
@@ -63,7 +64,18 @@ class PlayControls extends Component {
 
   componentDidMount() {
     this.fetch();
+    document.getElementById('player').play();
   }
+
+  // componentDidUpdate(prevState) {
+  //   // console.log(this.state);
+  //   console.log(prevState);
+  //   // if (this.state.currentSongIndex !== prevState.currentSongIndex) {
+  //   //   this.setState({
+  //   //     currentSong: this.state.song[this.state.currentSongIndex]
+  //   //   })
+  //   // }
+  // }
 
   fetch() {
     axios
@@ -87,31 +99,44 @@ class PlayControls extends Component {
       this.setState({
         currentSongIndex: this.state.songs.length - 1,
         currentSong: this.state.songs[this.state.currentSongIndex]
-      })
+      });
     } else {
       this.setState({
         currentSongIndex: this.state.currentSongIndex - 1,
         currentSong: this.state.songs[this.state.currentSongIndex]
-      })
+      });
     }
+    // document.getElementById('player').play();
+    console.log('Previous was clicked')
+    console.log(this.state.currentSongIndex);
   }
 
   playHandler() {
+    if (this.state.play) {
+      document.getElementById('player').play();
+    } else {
+      document.getElementById('player').pause();
+    }
     this.setState({
       play: !this.state.play
     });
   }
 
   nextHandler() {
+    if (this.state.currentSongIndex === this.state.songs.length - 1) {
+      this.setState({
+        currentSongIndex: 0,
+        currentSong: this.state.songs[this.state.currentSongIndex]
+      });
+      // document.getElementById('player').play();
+    } else {
+      this.setState({
+        currentSongIndex: this.state.currentSongIndex + 1,
+        currentSong: this.state.songs[this.state.currentSongIndex]
+      });
+    }
     console.log('Next was clicked')
-    this.setState({
-      currentSongIndex: this.state.currentSongIndex + 1,
-      currentSong: this.state.songs[this.state.currentSongIndex]
-    })
     console.log(this.state.currentSongIndex);
-    // this.setState({
-    //   currentSong: this.state.songs[this.state.currentSongIndex]
-    // })
   }
 
   shuffleHandler() {
@@ -213,7 +238,7 @@ class PlayControls extends Component {
         // alignContent: "center"
         }}>
         {/* Buttons */}
-        <SkipButton>
+        <SkipButton onClick={this.previousHandler}>
           <PreviousIcon/>
         </SkipButton>
 
@@ -279,6 +304,7 @@ class PlayControls extends Component {
               style={{backgroundImage: `url(${this.state.currentSong.album_art})`}}
             />
             <CurrentPlaying>
+              <audio id="player" src={this.state.currentSong.media}/>
               <CurrentArtist>{this.state.currentSong.artist}</CurrentArtist>
               <CurrentSongContainer>
                 <CurrentSong>{this.state.currentSong.title}</CurrentSong>
