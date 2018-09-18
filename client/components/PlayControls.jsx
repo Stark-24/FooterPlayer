@@ -28,8 +28,9 @@ class PlayControls extends Component {
     this.state = {
       currentSongIndex: 0,
       currentSong: '',
+      currentSongArtwork: '',
       songs: [],
-      play: false,
+      play: true,
       shuffle: false,
       repeat: 0,
       volume: true,
@@ -60,11 +61,12 @@ class PlayControls extends Component {
     this.volumeMouseLeave = this.volumeMouseLeave.bind(this);
     this.queueHandler = this.queueHandler.bind(this);
     this.fetch = this.fetch.bind(this);
+    this.fromSeconds = this.fromSeconds.bind(this);
   }
 
   componentDidMount() {
     this.fetch();
-    document.getElementById('player').play();
+    // document.getElementById('player').play();
   }
 
   // componentDidUpdate(prevState) {
@@ -84,11 +86,31 @@ class PlayControls extends Component {
         console.log(data[0]);
         this.setState({
           songs: data
-        });
-        this.setState({
-          currentSong: this.state.songs[this.state.currentSongIndex]
-        });
+        },
+          () => {
+            this.setState({
+              currentSong: this.state.songs[this.state.currentSongIndex]
+            },
+              () => {
+                this.setState({
+                  currentSongArtwork: this.state.currentSong.album_art
+                })
+              }
+            )
+          }
+        );
       })
+      // .then(() => {
+      //   let duration; 
+      //   document.getElementById("player").onloadedmetadata = () => {
+      //     duration = document.getElementById("player").duration;
+      //   };
+      //   console.log(duration);
+      //   this.setState({
+      //     currentTime: document.getElementById("player").currentTime,
+      //     duration: duration
+      //   })
+      // })
       .catch((err) => {
         console.log('Error retrieving songs', err);
       });
@@ -98,17 +120,53 @@ class PlayControls extends Component {
     if (this.state.currentSongIndex === 0) {
       this.setState({
         currentSongIndex: this.state.songs.length - 1,
-        currentSong: this.state.songs[this.state.currentSongIndex]
-      });
+      }, 
+        () => {
+          this.setState({
+            currentSong: this.state.songs[this.state.currentSongIndex]
+          },
+            () => {
+              this.setState({
+                currentSongArtwork: this.state.currentSong.album_art,
+              },
+                () => {
+                  if (!this.state.play) {
+                    document.getElementById('player').play();
+                  } else {
+                    document.getElementById('player').pause();
+                  }
+                }
+              )
+            }
+          )
+        }
+      );
     } else {
       this.setState({
         currentSongIndex: this.state.currentSongIndex - 1,
-        currentSong: this.state.songs[this.state.currentSongIndex]
-      });
+      },
+        () => {
+          this.setState({
+            currentSong: this.state.songs[this.state.currentSongIndex]
+          },
+            () => {
+              this.setState({
+                currentSongArtwork: this.state.currentSong.album_art,
+              },
+                () => {
+                  if (!this.state.play) {
+                    document.getElementById('player').play();
+                  } else {
+                    document.getElementById('player').pause();
+                  }
+                }
+              )
+            }
+          )
+        }
+      )
     }
     // document.getElementById('player').play();
-    console.log('Previous was clicked')
-    console.log(this.state.currentSongIndex);
   }
 
   playHandler() {
@@ -126,17 +184,65 @@ class PlayControls extends Component {
     if (this.state.currentSongIndex === this.state.songs.length - 1) {
       this.setState({
         currentSongIndex: 0,
-        currentSong: this.state.songs[this.state.currentSongIndex]
-      });
+      },
+        () => {
+          this.setState({
+            currentSong: this.state.songs[this.state.currentSongIndex]
+          },
+            () => {
+              this.setState({
+                currentSongArtwork: this.state.currentSong.album_art,
+              },
+                () => {
+                  if (!this.state.play) {
+                    document.getElementById('player').play();
+                  } else {
+                    document.getElementById('player').pause();
+                    // let duration; 
+                    // document.getElementById("player").onloadedmetadata = () => {
+                    //   // duration = document.getElementById("player").duration;
+                    //   console.log(document.getElementById("player").duration)
+                    // };
+                    // console.log(duration);
+                    
+                    document.getElementById('duration').innerHTML = this.fromSeconds(
+                      Math.floor(document.getElementById('player').onloadedmetadata = () => {
+                        document.getElementById('player').duration;
+                      })
+                    );
+                  }
+                }
+              )
+            }
+          )
+        }
+      );
       // document.getElementById('player').play();
     } else {
       this.setState({
         currentSongIndex: this.state.currentSongIndex + 1,
-        currentSong: this.state.songs[this.state.currentSongIndex]
-      });
+      },
+        () => {
+          this.setState({
+            currentSong: this.state.songs[this.state.currentSongIndex]
+          },
+            () => {
+              this.setState({
+                currentSongArtwork: this.state.currentSong.album_art,
+              },
+                () => {
+                  if (!this.state.play) {
+                    document.getElementById('player').play();
+                  } else {
+                    document.getElementById('player').pause();
+                  }
+                }
+              )
+            }
+          )
+        }
+      );
     }
-    console.log('Next was clicked')
-    console.log(this.state.currentSongIndex);
   }
 
   shuffleHandler() {
@@ -219,24 +325,52 @@ class PlayControls extends Component {
     }
   }
 
+  fromSeconds(seconds) {
+    var minutes =
+      Math.floor(seconds / 60) < 10
+        ? Math.floor(seconds / 60)
+        : Math.floor(seconds / 60);
+    var seconds = 
+      seconds % 60 > 9 ? 
+        seconds % 60 : 
+        "0" + (seconds % 60);
+    var timestring = minutes + ":" + seconds;
+    return timestring;
+  }
+
   render() {
+    let audioPlayer = document.getElementById('player');
     let playButton = this.state.play ? <PlayIcon/> : <PauseIcon/>;
     let shuffleButton = this.state.shuffle ? <ShuffleOnIcon/> : <ShuffleOffIcon/>;
     let repeatButton = this.state.repeat === 0 ? <RepeatNoneIcon/> :
-                      this.state.repeat === 1 ? <RepeatOneIcon/> :
-                      <RepeatAllIcon/>;
+      this.state.repeat === 1 ? <RepeatOneIcon/> :
+      <RepeatAllIcon/>;
     let volumeButton = this.state.volume ? <VolumeMaxIcon/> : <MuteIcon/>;
     let likeButton = this.state.like ? <LikeIcon/> : <DislikeIcon/>;
     let queueButton = this.state.queue ? <HamburgerClickedIcon/> : <HamburgerIcon/>;
     return (
       <div style={{
         display: "flex",
-        // flexDirection: "row",
         width: "100%",
         justifyContent: "center",
-        // alignItems: "center",
-        // alignContent: "center"
-        }}>
+      }}>
+      <audio
+          id = "player"
+          src = {this.state.currentSong.media}
+          onTimeUpdate = {() => {
+            if (audioPlayer.currentTime === audioPlayer.duration) {
+              document.getElementById("currentTime").innerHTML = "0:00";
+              this.pauseMusic(audioPlayer);
+            } else {
+              document.getElementById("currentTime").innerHTML = this.fromSeconds(
+                Math.floor(audioPlayer.currentTime)
+              );
+              document.getElementById("duration").innerHTML = this.fromSeconds(
+                Math.floor(audioPlayer.duration)
+              );
+            }
+          }}
+        />
         {/* Buttons */}
         <SkipButton onClick={this.previousHandler}>
           <PreviousIcon/>
@@ -262,7 +396,9 @@ class PlayControls extends Component {
           <Scrubbable>
             {/* Elapsed Time */}
             <TimePassedContainer>
-              <ElapsedTime>30:00</ElapsedTime>
+              <ElapsedTime id="currentTime">
+                0:00
+              </ElapsedTime>
             </TimePassedContainer>
             {/* ProgressBar */}
             <ProgressWrapper>
@@ -271,7 +407,9 @@ class PlayControls extends Component {
             </ProgressWrapper>
             {/* Total Time */}
             <TimePassedContainer>
-              <TotalTime>1:00:00</TotalTime>
+              <TotalTime id="duration">
+                -:--
+              </TotalTime>
             </TimePassedContainer>
           </Scrubbable>
         </Timeline>
@@ -301,10 +439,9 @@ class PlayControls extends Component {
         <SoundBadgeWrapper>
           <SoundBadge>
             <Avatar 
-              style={{backgroundImage: `url(${this.state.currentSong.album_art})`}}
+              style={{backgroundImage: `url(${this.state.currentSongArtwork})`}}
             />
             <CurrentPlaying>
-              <audio id="player" src={this.state.currentSong.media}/>
               <CurrentArtist>{this.state.currentSong.artist}</CurrentArtist>
               <CurrentSongContainer>
                 <CurrentSong>{this.state.currentSong.title}</CurrentSong>
@@ -354,15 +491,12 @@ const Button = styled.button`
 `;
 
 const SkipButton = styled(Button)`
-  /* background-position: center; */
 `;
 
 const PlayButton = styled(Button)`
-  /* background-position: center center; */
 `;
 
 const ShuffleButton = styled(Button)`
-
 `;
 
 const RepeatButton = styled(Button)`
