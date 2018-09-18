@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import QueueItemView from './QueueItemView.jsx';
 import styled from 'styled-components';
 
-var PlayControlsQueue = ({popoutStyles, songs}) => {
+var PlayControlsQueue = ({popoutStyles, songs, queueItemClickHandler}) => {
   return (
     <QueuePanel style={popoutStyles}>
       <Header>
@@ -13,8 +13,8 @@ var PlayControlsQueue = ({popoutStyles, songs}) => {
       <Scrollable>
         <ScrollableInner>
           {/* <div> */}
-          {songs.map(song => (
-            <QueueItemView song={song} key={song.id}/>
+          {songs.map((song, index) => (
+            <QueueItemView song={song} key={song.id} index={index} queueItemClickHandler={queueItemClickHandler}/>
           ))}
           {/* </div> */}
         </ScrollableInner>

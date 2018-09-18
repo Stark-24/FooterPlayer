@@ -60,6 +60,7 @@ class PlayControls extends Component {
     this.volumeMouseEnter = this.volumeMouseEnter.bind(this);
     this.volumeMouseLeave = this.volumeMouseLeave.bind(this);
     this.queueHandler = this.queueHandler.bind(this);
+    this.queueItemClickHandler = this.queueItemClickHandler.bind(this);
     this.fetch = this.fetch.bind(this);
     this.fromSeconds = this.fromSeconds.bind(this);
   }
@@ -326,6 +327,16 @@ class PlayControls extends Component {
     }
   }
 
+  queueItemClickHandler(song, index) {
+    this.setState({
+      currentSongIndex: index,
+      currentSong: song,
+      currentSongArtwork: song.album_art
+    },
+      this.playHandler
+    )
+  }
+
   fromSeconds(seconds) {
     var minutes =
       Math.floor(seconds / 60) < 10
@@ -453,7 +464,8 @@ class PlayControls extends Component {
               </LikeButton>
               <QueueButton onClick={this.queueHandler}>
                 {queueButton}
-                <PlayControlsQueue 
+                <PlayControlsQueue
+                  queueItemClickHandler={this.queueItemClickHandler}
                   songs={this.state.songs}
                   popoutStyles={{
                     pointerEvents: this.state.queuePanelStyle.pointerEvents,

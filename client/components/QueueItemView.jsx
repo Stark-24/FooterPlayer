@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-var QueueItemView = ({song}) => {
+var QueueItemView = ({song, queueItemClickHandler, index}) => {
   return ( 
-    <ItemWrapper> 
+    <ItemWrapper onClick={() => queueItemClickHandler(song, index)}> 
       <ItemView>
         <DragHandle/>
         {/* Artwork */}
