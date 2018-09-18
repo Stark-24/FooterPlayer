@@ -66,6 +66,11 @@ class PlayControls extends Component {
 
   componentDidMount() {
     this.fetch();
+    let duration;
+    document.getElementById('player').onloadedmetadata = () => {
+      duration = Math.floor(document.getElementById('player').duration);
+      document.getElementById('duration').innerHTML = this.fromSeconds(duration);
+    }
     // document.getElementById('player').play();
   }
 
@@ -83,7 +88,6 @@ class PlayControls extends Component {
     axios
       .get('/api/songs')
       .then(({data}) => {
-        console.log(data[0]);
         this.setState({
           songs: data
         },
@@ -100,17 +104,6 @@ class PlayControls extends Component {
           }
         );
       })
-      // .then(() => {
-      //   let duration; 
-      //   document.getElementById("player").onloadedmetadata = () => {
-      //     duration = document.getElementById("player").duration;
-      //   };
-      //   console.log(duration);
-      //   this.setState({
-      //     currentTime: document.getElementById("player").currentTime,
-      //     duration: duration
-      //   })
-      // })
       .catch((err) => {
         console.log('Error retrieving songs', err);
       });
@@ -134,6 +127,11 @@ class PlayControls extends Component {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
+                    let duration;
+                    document.getElementById('player').onloadedmetadata = () => {
+                      duration = Math.floor(document.getElementById('player').duration);
+                      document.getElementById('duration').innerHTML = this.fromSeconds(duration);
+                    }
                   }
                 }
               )
@@ -158,6 +156,11 @@ class PlayControls extends Component {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
+                    let duration;
+                    document.getElementById('player').onloadedmetadata = () => {
+                      duration = Math.floor(document.getElementById('player').duration);
+                      document.getElementById('duration').innerHTML = this.fromSeconds(duration);
+                    }
                   }
                 }
               )
@@ -198,18 +201,11 @@ class PlayControls extends Component {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
-                    // let duration; 
-                    // document.getElementById("player").onloadedmetadata = () => {
-                    //   // duration = document.getElementById("player").duration;
-                    //   console.log(document.getElementById("player").duration)
-                    // };
-                    // console.log(duration);
-                    
-                    document.getElementById('duration').innerHTML = this.fromSeconds(
-                      Math.floor(document.getElementById('player').onloadedmetadata = () => {
-                        document.getElementById('player').duration;
-                      })
-                    );
+                    let duration;
+                    document.getElementById('player').onloadedmetadata = () => {
+                      duration = Math.floor(document.getElementById('player').duration);
+                      document.getElementById('duration').innerHTML = this.fromSeconds(duration);
+                    }
                   }
                 }
               )
@@ -235,6 +231,11 @@ class PlayControls extends Component {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
+                    let duration;
+                    document.getElementById('player').onloadedmetadata = () => {
+                      duration = Math.floor(document.getElementById('player').duration);
+                      document.getElementById('duration').innerHTML = this.fromSeconds(duration);
+                    }
                   }
                 }
               )
@@ -355,22 +356,21 @@ class PlayControls extends Component {
         justifyContent: "center",
       }}>
       <audio
-          id = "player"
-          src = {this.state.currentSong.media}
-          onTimeUpdate = {() => {
-            if (audioPlayer.currentTime === audioPlayer.duration) {
-              document.getElementById("currentTime").innerHTML = "0:00";
-              this.pauseMusic(audioPlayer);
-            } else {
-              document.getElementById("currentTime").innerHTML = this.fromSeconds(
-                Math.floor(audioPlayer.currentTime)
-              );
-              document.getElementById("duration").innerHTML = this.fromSeconds(
-                Math.floor(audioPlayer.duration)
-              );
-            }
-          }}
-        />
+        id = "player"
+        src = {this.state.currentSong.media}
+        onTimeUpdate = {() => {
+          if (audioPlayer.currentTime === audioPlayer.duration) {
+            document.getElementById("currentTime").innerHTML = "0:00";
+            this.pauseMusic(audioPlayer);
+          } else {
+            let currentTime = Math.floor(audioPlayer.currentTime);
+            let duration = Math.floor(audioPlayer.duration);
+            document.getElementById("currentTime").innerHTML = this.fromSeconds(currentTime);
+            document.getElementById("duration").innerHTML = this.fromSeconds(duration);
+            document.getElementById("currentProgress").style.width = ((currentTime/duration) * 352) + "px"
+          }
+        }}
+      />
         {/* Buttons */}
         <SkipButton onClick={this.previousHandler}>
           <PreviousIcon/>
@@ -403,7 +403,7 @@ class PlayControls extends Component {
             {/* ProgressBar */}
             <ProgressWrapper>
               <ProgressBackground/>
-              <ProgressBar/>
+              <ProgressBar id="currentProgress"/>
             </ProgressWrapper>
             {/* Total Time */}
             <TimePassedContainer>
@@ -609,7 +609,7 @@ const ProgressBackground = styled.div`
 const ProgressBar = styled(ProgressBackground)`
   /* transition: width 50ms; */
   background-color: #f50;
-  width: 50%;
+  width: 0;
 `;
 
 const SoundBadgeWrapper = styled(Timeline)`
