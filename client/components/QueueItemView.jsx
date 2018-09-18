@@ -1,17 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import PlayCircleIcon from '../assets/play-circle.jsx';
 
 var QueueItemView = ({song, queueItemClickHandler, index}) => {
+  // console.log(queueItemViewSelect)
   return ( 
     <ItemWrapper onClick={() => queueItemClickHandler(song, index)}> 
-      <ItemView>
+      <ItemView id="itemView" 
+        // style={{background: queueItemViewSelect.background}}
+        // onMouseOver={} 
+        // onMouseLeave={}
+      >
         <DragHandle/>
         {/* Artwork */}
         <ItemArtwork>
           <ArtworkImage 
             style={{backgroundImage: `url(${song.album_art})`}}
           />
-          <PlayButton/>
+          {/* <div style={{visibility: queueItemViewSelect.visibility}}> */}
+            <PlayCircleIcon/>
+
+          {/* </div> */}
         </ItemArtwork>
         {/* Details */}
         <ItemDetails>
@@ -91,12 +100,12 @@ const ArtworkImage = styled.div`
   background-position: 50% 50%;
 `;
 
-const PlayButton = styled.div`
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  display: none;
-`;
+// const PlayButton = styled(PlayCircleIcon)`
+//   position: absolute;
+//   top: 3px;
+//   left: 4px;
+//   display: none;
+// `;
 
 const ItemDetails = styled.div`
   display: block;

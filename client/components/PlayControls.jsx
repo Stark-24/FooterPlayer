@@ -30,7 +30,7 @@ class PlayControls extends Component {
       currentSong: '',
       currentSongArtwork: '',
       songs: [],
-      play: true,
+      play: false,
       shuffle: false,
       repeat: 0,
       volume: true,
@@ -48,7 +48,11 @@ class PlayControls extends Component {
         opacity: '0',
         transitionDuration: '0.2s',
         transitionTimingFunction: 'cubic-bezier(.66,-.41,1,1)'
-      }
+      }, 
+      // queueItemViewSelect: {
+      //   background: '#fff',
+      //   visibility: 'hidden'
+      // },
     }
     this.previousHandler = this.previousHandler.bind(this);
     this.playHandler = this.playHandler.bind(this);
@@ -124,7 +128,7 @@ class PlayControls extends Component {
                 currentSongArtwork: this.state.currentSong.album_art,
               },
                 () => {
-                  if (!this.state.play) {
+                  if (this.state.play) {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
@@ -153,7 +157,7 @@ class PlayControls extends Component {
                 currentSongArtwork: this.state.currentSong.album_art,
               },
                 () => {
-                  if (!this.state.play) {
+                  if (this.state.play) {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
@@ -174,14 +178,17 @@ class PlayControls extends Component {
   }
 
   playHandler() {
-    if (this.state.play) {
-      document.getElementById('player').play();
-    } else {
-      document.getElementById('player').pause();
-    }
     this.setState({
       play: !this.state.play
-    });
+    }, 
+      () => {
+        if (this.state.play) {
+          document.getElementById('player').play();
+        } else {
+          document.getElementById('player').pause();
+        }
+      }
+    );
   }
 
   nextHandler() {
@@ -198,7 +205,7 @@ class PlayControls extends Component {
                 currentSongArtwork: this.state.currentSong.album_art,
               },
                 () => {
-                  if (!this.state.play) {
+                  if (this.state.play) {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
@@ -228,7 +235,7 @@ class PlayControls extends Component {
                 currentSongArtwork: this.state.currentSong.album_art,
               },
                 () => {
-                  if (!this.state.play) {
+                  if (this.state.play) {
                     document.getElementById('player').play();
                   } else {
                     document.getElementById('player').pause();
@@ -331,11 +338,26 @@ class PlayControls extends Component {
     this.setState({
       currentSongIndex: index,
       currentSong: song,
-      currentSongArtwork: song.album_art
+      currentSongArtwork: song.album_art,
+      // queueItemViewSelect: {
+      //   background: '#f8f8f8',
+      //   visibility: 'visible'
+      // }
     },
-      this.playHandler
+      () => {
+        // document.getElementById('itemView').style.backgroundColor('#f8f8f8');
+        if (this.state.play) {
+          document.getElementById('player').play();
+        } else {
+          this.playHandler();
+        }
+      }
     )
   }
+
+  // queueItemHoverHandler() {
+
+  // };
 
   fromSeconds(seconds) {
     var minutes =
@@ -352,7 +374,7 @@ class PlayControls extends Component {
 
   render() {
     let audioPlayer = document.getElementById('player');
-    let playButton = this.state.play ? <PlayIcon/> : <PauseIcon/>;
+    let playButton = this.state.play ? <PauseIcon/> : <PlayIcon/>;
     let shuffleButton = this.state.shuffle ? <ShuffleOnIcon/> : <ShuffleOffIcon/>;
     let repeatButton = this.state.repeat === 0 ? <RepeatNoneIcon/> :
       this.state.repeat === 1 ? <RepeatOneIcon/> :
@@ -474,6 +496,7 @@ class PlayControls extends Component {
                     transitionDuration: this.state.queuePanelStyle.transitionDuration,
                     transitionTimingFunction: this.state.queuePanelStyle.transitionTimingFunction
                   }}
+                  // queueItemViewSelect={this.state.queueItemViewSelect}
                 />
               </QueueButton>
             </SoundBadgeActions>
