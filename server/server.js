@@ -15,7 +15,7 @@ app.use(parser.urlencoded({extended: true}));
 app.use(cors());
 app.use('/api', routes);
 
-app.get(db);
+// app.get(db);
 
 app.use(morgan('dev'));
 app.use(express.static(path.resolve(__dirname, '../public')));

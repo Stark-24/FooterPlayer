@@ -37,7 +37,7 @@ const InnerWrapper = styled(Wrapper)`
 
 const ControlsInnerWrapper = styled(InnerWrapper)`
   z-index: 333;
-  width: 1080px;
+  width: 1240px;
   min-width: 960px;
   position: relative;
   flex-wrap: nowrap;

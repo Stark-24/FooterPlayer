@@ -590,7 +590,7 @@ const Timeline = styled.div`
   flex-grow: 1;
   float: left;
   position: relative;
-  width: 472px;
+  width: 632px;
   /* min-width: 332px; */
   height: 48px;
   margin: 0 12px 0 0;
@@ -623,7 +623,7 @@ const ElapsedTime = styled.span`
 const ProgressWrapper = styled(Scrubbable)`
   cursor: pointer;
   padding: 10px 0;
-  width: 352px;
+  width: 512px;
   margin: 13px 10px 0 10px;
 `;
 
