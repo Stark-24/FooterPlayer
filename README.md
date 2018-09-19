@@ -31,6 +31,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 ```sh
 npm run server-dev
 npm run react-dev
+npm run populate-db
 ```
 
 ### Installing Dependencies
