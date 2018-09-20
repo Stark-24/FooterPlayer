@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import PlayCircleIcon from '../assets/play-circle.jsx';
 
 var QueueItemView = ({song, queueItemClickHandler, index}) => {
-  // console.log(queueItemViewSelect)
+
   return ( 
     <ItemWrapper onClick={() => queueItemClickHandler(song, index)}> 
-      <ItemView id="itemView" 
-        // style={{background: queueItemViewSelect.background}}
-        // onMouseOver={} 
+      <ItemView
+
+        // onMouseOver={}
         // onMouseLeave={}
       >
         <DragHandle/>
@@ -17,10 +17,7 @@ var QueueItemView = ({song, queueItemClickHandler, index}) => {
           <ArtworkImage 
             style={{backgroundImage: `url(${song.album_art})`}}
           />
-          {/* <div style={{visibility: queueItemViewSelect.visibility}}> */}
-            <PlayCircleIcon/>
-
-          {/* </div> */}
+          <PlayCircleIcon/>
         </ItemArtwork>
         {/* Details */}
         <ItemDetails>
