@@ -25,9 +25,9 @@ var NavBar = (props) => (
           <TryPro> Try Pro </TryPro>
           <Upload> Upload </Upload>
           <User> Stark </User>
-          <Notifications></Notifications>
+          <Notifications>Notifications</Notifications>
           <Messages>Messages</Messages>
-          <NavMore>More</NavMore>
+          {/* <NavMore>More</NavMore> */}
         </HeaderRight>
       </HeaderInner>
     </Banner>
@@ -65,6 +65,9 @@ const Logo = styled.div`
   float: left;
   width: 69px;
   height: 47px;
+  background-image: url('https://s3-us-west-1.amazonaws.com/starkloud-footer/starkloud.png');
+  background-size: 69px 47px;
+  background-repeat: no-repeat;
 `;
 
 const Home = styled.li`
