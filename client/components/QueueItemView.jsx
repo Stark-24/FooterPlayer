@@ -7,7 +7,6 @@ var QueueItemView = ({song, queueItemClickHandler, index}) => {
   return ( 
     <ItemWrapper onClick={() => queueItemClickHandler(song, index)}> 
       <ItemView
-
         // onMouseOver={}
         // onMouseLeave={}
       >
