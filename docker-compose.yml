@@ -7,10 +7,10 @@ services:
     depends_on: 
       - db
     environment: 
-      - DATABASE_URL: postgres://jbui@db:5432/starkloud
+      - DATABASE_URL=postgres://jbui@db:5432/starkloud
   db:
     image: postgres
     restart: always
     environment:
-      - POSTGRES_DB: starkloud
-      - POSTGRES_PASSWORD: stark
+      - POSTGRES_DB=starkloud
+      - POSTGRES_PASSWORD=stark
