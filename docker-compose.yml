@@ -1,0 +1,16 @@
+version: '2'
+services:
+  server:
+    build: .
+    ports: 
+      - 9004:9004
+    depends_on: 
+      - db
+    environment: 
+      - DATABASE_URL=postgres://jbui@db:5432/starkloud
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=starkloud
+      - POSTGRES_PASSWORD=stark

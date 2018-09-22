@@ -1,8 +1,8 @@
 const pg = require('pg');
 const Sequelize = require('sequelize');
 
-const connection = new Sequelize('starkloud', 'jbui', '', {
-  host: 'localhost',
+const connection = new Sequelize('starkloud', 'jbui', 'stark', {
+  host: 'db',
   dialect: 'postgres'
 });
 
