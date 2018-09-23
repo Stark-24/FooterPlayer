@@ -7,7 +7,7 @@ services:
     depends_on: 
       - db
     environment: 
-      - DATABASE_URL=postgres://postgres@db:5432/starkloud
+      - DATABASE_URL=postgres://stark@db:5432/starkloud
   db:
     image: postgres
     restart: always
