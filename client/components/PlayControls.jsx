@@ -91,7 +91,7 @@ class PlayControls extends Component {
 
   fetch() {
     axios
-      .get('/api/songs')
+      .get('http://54.183.223.119:9004/api/songs')
       .then(({data}) => {
         this.setState({
           songs: data
