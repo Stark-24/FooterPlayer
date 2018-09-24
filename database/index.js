@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const connection = new Sequelize('starkloud', 'postgres', '', {
-  host: 'postgres',
+  host: 'db',
   dialect: 'postgres'
 });
 
