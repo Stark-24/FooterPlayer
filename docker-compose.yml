@@ -7,8 +7,6 @@ services:
       - "9004:9004"
     depends_on: 
       - db
-    links: 
-      - db
     working_dir: /usr/src/app
     environment: 
       SEQ_DB: starkloud
