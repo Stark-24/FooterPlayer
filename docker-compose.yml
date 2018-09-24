@@ -2,6 +2,7 @@ version: "2"
 services:
   footerplayer:
     # build: .
+    image: footerplayer
     ports: 
       - "9004:9004"
     depends_on: 
