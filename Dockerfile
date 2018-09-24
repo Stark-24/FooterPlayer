@@ -8,4 +8,4 @@ RUN npm install
 
 EXPOSE 9004
 
-CMD ["npm", "start" && "node", "database/helper.js"]
+CMD ["npm", "start"]
