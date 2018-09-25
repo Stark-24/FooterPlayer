@@ -1,7 +1,6 @@
 version: "2"
 services:
   footerplayer:
-    # build: .
     image: jbweee/footerplayer
     ports: 
       - "9004:9004"
@@ -13,9 +12,6 @@ services:
       SEQ_USER: postgres
       PORT: 9004
       DATABASE_URL: postgres://postgres@db:5432/starkloud
-  # web:
-  #   image: footerplayer
-  #   command: node database/helper.js
   db:
     image: postgres
     ports: 
