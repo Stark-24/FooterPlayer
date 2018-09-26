@@ -2,12 +2,13 @@
 
 > StarkCloud
 
+
 ## Related Projects
 
   - https://github.com/Stark-24/SideBar
   - https://github.com/Stark-24/HeroPlayer 
   - https://github.com/Stark-24/CommentSection 
-  - https://github.com/Stark-24/FooterPlayer
+  - https://github.com/Stark-24/ProxyServer-Justin
 
 ## Table of Contents
 
@@ -17,7 +18,8 @@
 
 ## Usage
 
-> Some usage instructions
+> User must have PostgreSQL installed on their machine
+> Front end is currently configured to be run on a specific EC2 instance
 
 ## Requirements
 
@@ -41,4 +43,3 @@ From within the root directory:
 ```sh
 npm install
 ```
-
