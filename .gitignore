@@ -1,3 +1,4 @@
 node_modules
 public/app.js
 aws-credentials.json
+package-lock.json
