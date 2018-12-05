@@ -21,7 +21,7 @@ import HamburgerIcon from '../assets/hamburger.jsx';
 import HamburgerClickedIcon from '../assets/hamburger-clicked.jsx';
 // import * as Icons from '../assets';
 
-//MAKE EACH BUTTON A CONTROL COMPONENT TO PASS STATE TO THE TIMELINE
+//State management for visual and functional play controls
 class PlayControls extends Component {
   constructor(props) {
     super(props);
@@ -69,6 +69,7 @@ class PlayControls extends Component {
     this.fromSeconds = this.fromSeconds.bind(this);
   }
 
+  //Immediately grab the current song duration
   componentDidMount() {
     this.fetch();
     let duration;
@@ -76,19 +77,9 @@ class PlayControls extends Component {
       duration = Math.floor(document.getElementById('player').duration);
       document.getElementById('duration').innerHTML = this.fromSeconds(duration);
     }
-    // document.getElementById('player').play();
   }
 
-  // componentDidUpdate(prevState) {
-  //   // console.log(this.state);
-  //   console.log(prevState);
-  //   // if (this.state.currentSongIndex !== prevState.currentSongIndex) {
-  //   //   this.setState({
-  //   //     currentSong: this.state.song[this.state.currentSongIndex]
-  //   //   })
-  //   // }
-  // }
-
+  //Fetch song data from the database of songs
   fetch() {
     axios
       .get('http://13.57.31.213:9004/api/songs')
@@ -114,6 +105,7 @@ class PlayControls extends Component {
       });
   }
 
+  //Handles previous song button state and song changing
   previousHandler() {
     if (this.state.currentSongIndex === 0) {
       this.setState({
@@ -174,9 +166,9 @@ class PlayControls extends Component {
         }
       )
     }
-    // document.getElementById('player').play();
   }
 
+  //Handles state of play button upon click
   playHandler() {
     this.setState({
       play: !this.state.play
@@ -191,6 +183,7 @@ class PlayControls extends Component {
     );
   }
 
+  //Handles next song button state and song changing
   nextHandler() {
     if (this.state.currentSongIndex === this.state.songs.length - 1) {
       this.setState({
@@ -221,7 +214,6 @@ class PlayControls extends Component {
           )
         }
       );
-      // document.getElementById('player').play();
     } else {
       this.setState({
         currentSongIndex: this.state.currentSongIndex + 1,

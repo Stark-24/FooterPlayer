@@ -3,6 +3,7 @@ import PlayControls from './PlayControls.jsx';
 import styled from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+//FooterPlayer wrapper to anchor to the bottom of the page 
 var FooterPlayer = (props) => (
 
   <React.Fragment>

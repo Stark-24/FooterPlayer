@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+//Static NavBar anchored to the top of the page
 var NavBar = (props) => (
   <React.Fragment>
     <CssBaseline/>
@@ -118,21 +119,6 @@ const TryPro = styled.a`
   text-decoration: none;
   padding: 14px 10px 12px;
   float: left;
-`;
-
-const Upload = styled(TryPro)`
-`;
-
-const User = styled(TryPro)`
-`;
-
-const Notifications = styled(TryPro)`
-`;
-
-const Messages = styled(TryPro)`
-`;
-
-const NavMore = styled(TryPro)`
 `;
 
 export default NavBar;
